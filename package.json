@@ -6,7 +6,8 @@
   "author": "John Horback",
   "license": "MIT",
   "dependencies": {
-    "lit": "^2.0.0-rc.2"
+    "lit": "^2.0.0-rc.2",
+    "@material/typography": "^11.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -15,7 +16,12 @@
     "@babel/preset-env": "^7.14.7",
     "@babel/register": "^7.14.5",
     "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "extract-loader": "^5.1.0",
     "html-webpack-plugin": "^5.3.2",
+    "lit-scss-loader": "^1.1.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
     "webpack": "^5.42.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"

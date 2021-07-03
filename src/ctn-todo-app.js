@@ -1,6 +1,7 @@
 
 import {html, css, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import Style from "./ctn-todo-app.scss";
 
 @customElement("ctn-todo-app")
 class TodoApp extends LitElement {
@@ -8,15 +9,7 @@ class TodoApp extends LitElement {
   @property()
   name = 'Name property';
 
-  static styles = css`
-    :host {
-      font-family: roboto;
-      display: block;
-      background-color: blue;
-      color: white;
-      padding: 1rem;
-    }
-  `;
+  static styles = Style;
 
   render() {
     return html`
