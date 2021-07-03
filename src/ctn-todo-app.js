@@ -1,25 +1,29 @@
 
-const template = document.createElement('template');
+import {html, css, LitElement} from 'lit';
+import {customElement, property} from 'lit/decorators.js';
 
-template.innerHTML = `
-  <style>
+@customElement("ctn-todo-app")
+class TodoApp extends LitElement {
+
+  @property()
+  name = 'Name property';
+
+  static styles = css`
     :host {
-      font-family: Roboto;
-      margin: 0;
+      font-family: roboto;
+      display: block;
+      background-color: blue;
+      color: white;
+      padding: 1rem;
     }
-  </style>
-  <div>
-    <h1>Connect.Tech - Todo - Native</h1>
-  </div>
-`;
+  `;
 
-class TodoApp extends HTMLElement {
-  constructor() {
-    super();
-
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
-    this._shadowRoot.appendChild(template.content.cloneNode(true));
+  render() {
+    return html`
+      <div>
+        <h1>Connect.Tech - Todo - Native</h1>
+        <span>${this.name}</span>
+      </div>
+    `;
   }
 }
-
-window.customElements.define('ctn-todo-app', TodoApp);
